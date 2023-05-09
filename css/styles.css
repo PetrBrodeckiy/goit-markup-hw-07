@@ -108,7 +108,7 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .title {
+  .title-mob {
     text-align: center;
   }
 }
@@ -492,19 +492,90 @@ body {
 
 .overlay {
   max-width: 1440px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
-
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/people-office.jpg);
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Mobile hero version */
+
+@media screen and (min-device-pixel-ration: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/mobile/Dark-bg@2x.jpg");
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/mobile/Dark-bg.jpg");
+    max-width: 428px;
+    min-height: 432px;
+  }
+}
+
+/* Tablet hero version */
+
+@media screen and (min-device-pixel-ration: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/tablet/Dark-bg@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/tablet/Dark-bg.jpg");
+    max-width: 768px;
+    min-height: 436px;
+  }
+}
+
+/* Desktop hero version */
+
+@media screen and (min-device-pixel-ration: 2) and (min-width: 1158px),
+  screen and (min-resolution: 192dpi) and (min-width: 1158px),
+  screen and (min-resolution: 2dppx) and (min-width: 1158px) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/desktop/Dark-bg@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/desktop/Dark-bg.jpg");
+
+    max-width: 1440px;
+    min-height: 600px;
+  }
 }
 
 /* Друга секція / advantages */
@@ -856,9 +927,12 @@ body {
   margin-bottom: 72px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .filter-btn {
     flex-wrap: wrap;
+    gap: 16px 24px;
+    justify-content: flex-start;
+    margin-bottom: 48px;
   }
 }
 
