@@ -886,6 +886,12 @@ body {
   }
 }
 
+@media screen and (min-width: 1158px) {
+  .client-icon {
+    width: 168px;
+  }
+}
+
 .client-icon:hover,
 .client-icon:focus {
   color: var(--activebackbtncolor);
